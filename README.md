@@ -22,8 +22,6 @@ cd skywatch
 npm ci
 ```
 
-This is a private repository, so authenticate with GitHub and obtain repository access before cloning.
-
 Start the scraper and API in one terminal:
 
 ```bash
@@ -39,6 +37,12 @@ npm run dev
 Open **[http://localhost:5180](http://localhost:5180)**. Vite forwards `/api` requests to the backend on port **3000**. If 5180 is occupied, use the URL printed by Vite.
 
 The backend attempts a scrape on startup and every five minutes afterward. A fresh clone starts with no observations; charts fill as data arrives, or you can import an existing JSON history file.
+
+### Share on the local network
+
+Vite is configured with `host: true`, so another device on a reachable local network can open `http://<your-computer-LAN-IP>:5180/home`. Replace the placeholder with the serving computer's current Ethernet or Wi-Fi IP address. `localhost` refers to the device opening the link, so your friend must use your computer's LAN address.
+
+Keep both the frontend and backend running and the serving computer awake. The frontend proxies API requests, so your friend only needs the port 5180 URL. Guest Wi-Fi, campus networks, or router client isolation may prevent connections between devices even when they use the same Wi-Fi name. This local address is reachable only where the network permits; making the GitHub repository public shares the source code and does not host the running dashboard.
 
 ### Bun alternative
 
