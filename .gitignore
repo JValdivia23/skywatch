@@ -1,0 +1,44 @@
+# Dependencies and generated web assets
+node_modules/
+/dist/
+.vite/
+
+# Locally collected weather data and logs
+/weather_log.json
+/history/
+/public_feed/
+*.log
+
+# Environment files and signing credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.mobileprovision
+*.jks
+*.keystore
+/android/key.properties
+/android/keystore.properties
+/android/app/google-services.json
+GoogleService-Info.plist
+.netrc
+
+# Editor, operating system, and native build state
+.DS_Store
+.idea/
+.vscode/
+xcuserdata/
+*.xcuserstate
+DerivedData/
+.build/
+.swiftpm/
+*.ipa
+*.xcarchive
+
+# Local backups, sync-conflict copies, and scratch screenshots
+*.bak
+*-ATOC-*
+/clipboard_screenshot.png
